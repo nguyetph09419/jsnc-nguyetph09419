@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="../image/kiss-wink-heart-regular.svg">
+    <title>Admin</title>
+    <!-- Tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../AdminLTE-3.0.5/plugins/fontawesome-free/css/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../AdminLTE-3.0.5/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../AdminLTE-3.0.5/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  </head>
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </nav>
+
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="../AdminLTE-3.0.5/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
+          class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">JavaScript 2</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../AdminLTE-3.0.5/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Lê Thị Nguyệt</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Danh Sách
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item" >
+                  <a href="/backend/html/category.html" class="nav-link">
+                    <i class="far fa-grin nav-icon"></i>
+                    <p>Danh Mục</p>
+                  </a>
+                </li>
+                <li class="nav-item" id="product">
+                  <a href="/backend/html/product.html" class="nav-link ">
+                    <i class="far fa-grin-tongue nav-icon"></i>
+                    <p>Sản Phẩm</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-laugh-squint nav-icon"></i>
+                    <p>Tin Tức</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-kiss-beam nav-icon"></i>
+                    <p>Tài Khoản</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Forms
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../AdminLTE-3.0.5/pages/forms/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>General Elements</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../AdminLTE-3.0.5/pages/forms/advanced.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Advanced Elements</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../AdminLTE-3.0.5/pages/forms/editors.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Editors</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../AdminLTE-3.0.5/pages/forms/validation.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Validation</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                  Tables
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../AdminLTE-3.0.5/pages/tables/simple.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Simple Tables</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../AdminLTE-3.0.5/pages/tables/data.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>DataTables</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../AdminLTE-3.0.5/pages/tables/jsgrid.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>jsGrid</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2 ml-1">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+              <li class="breadcrumb-item active">hello</li>
+            </ol>
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <!-- <section class="content">
+        <div class="fixed inset-0 bg-gray-500 z-10  opacity-80 transition ease-in-out duration-200 hidden" id="Editoverlay"></div>
+        <div class="form-create-cate fixed inset-1/2 transform -translate-x-1/2 -translate-y-1/2 border-black  rounded z-10 bg-white w-96 w-1/2 p-3 h-80 hidden  transition ease-in-out duration-200" id="form-edit-cate">
+          <div class="form-edit-cate-header py-2 flex justify-content-between align-items-center ">
+            <div class="title text-2xl font-bold" >Sửa </div>
+            <button class="closebtn cursor-pointer outline-none border-none bg-none font-bold text-2xl " id="close-form-edit-cate" >&times;</button>
+          </div>
+          <div class="form-edit-cate-body">
+            <form action="" enctype="multipart/form-data" id="editform">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" id="nameedit" placeholder="Enter name">
+                <small id="nameerror" class="form-text text-muted"></small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Image</label>
+                <input type="text" class="form-control" id="imageedit" placeholder="image">
+              </div>
+              <button type="submit"  class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div> -->
+        <div class="fixed inset-0 bg-gray-500 z-10  opacity-80 transition ease-in-out duration-200 hidden" id="overlay"></div>
+        <div class="form-create-cate fixed inset-1/2 transform -translate-x-1/2 -translate-y-1/2 border-black  rounded z-10 bg-white w-96 w-1/2 p-3 h-80 hidden  transition ease-in-out duration-200" id="form-create-cate">
+          <div class="form-create-cate-header py-2 flex justify-content-between align-items-center ">
+            <div class="title text-2xl font-bold" >Thêm Mới</div>
+            <button class="closebtn cursor-pointer outline-none border-none bg-none font-bold text-2xl " id="close-form-create-cate" >&times;</button>
+          </div>
+          <div class="form-create-cate-body">
+            <form action="" enctype="multipart/form-data" id="form">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name">
+                <small id="nameerror" class="form-text text-muted"></small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Image</label>
+                <input type="text" class="form-control" id="image" placeholder="image">
+              </div>
+              <button type="submit"  class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Danh Sách</h3>
+                  <div class="alert alert-success hidden text-center" role="alert" id="cate-success">
+                    
+                  </div>
+                </div>
+                
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead id="thead">
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <center><strong>Copyright &copy; 2019-2020 <a href="#">Lê Thị Nguyệt</a>.</strong>
+        All rights reserved.</center>
+    </footer>
+  </div>
+  <!-- sweet alert -->
+  <!-- <script src="/products.js"></script> -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- category javascỉpt -->
+  <script src="main.js"></script>
+  
+  <!-- admin lte js -->
+  <script src="../AdminLTE-3.0.5/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../AdminLTE-3.0.5/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../AdminLTE-3.0.5/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../AdminLTE-3.0.5/dist/js/adminlte.js"></script>
+
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="../AdminLTE-3.0.5/dist/js/demo.js"></script>
+
+  <!-- PAGE PLUGINS -->
+  <!-- jQuery Mapael -->
+  <script src="../AdminLTE-3.0.5/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script src="../AdminLTE-3.0.5/plugins/raphael/raphael.min.js"></script>
+  <script src="../AdminLTE-3.0.5/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+  <script src="../AdminLTE-3.0.5/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../AdminLTE-3.0.5/plugins/chart.js/Chart.min.js"></script>
+</body>
+
+</html>

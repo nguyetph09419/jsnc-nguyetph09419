@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>product-detail</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css'>
+  <link rel='stylesheet'
+    href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap'>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../AdminLTE-3.0.5/plugins/fontawesome-free/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="antialiased">
+  <div class="container mx-auto">
+    <header class="flex">
+      <div class="flex-1 flex items-center">
+        <div class="relative hidden md:block">
+          <input type="search"
+            class="pl-10 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+            placeholder="Search">
+          <svg class="h-6 w-6 text-gray-300 ml-2 mt-2 stroke-current absolute top-0 left-0"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex-grow flex justify-center">
+        <img src="https://bizweb.dktcdn.net/100/345/647/themes/710110/assets/logo.png?1593244016703" alt="">
+      </div>
+
+      <div class="flex-1 flex justify-center items-center justify-around">
+        <div class="uppercase"><a href="" class="text-black hover:text-black font-medium">Tài Khoản</a></div>
+        <div class="flex uppercase ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20px">
+            <path
+              d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          </svg>
+          <a href="" class="text-black hover:text-black font-medium">Giỏ Hàng</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="my-4">
+      <ul class="flex justify-center ">
+        <li class="mx-3 font-semibold  "><a href="index.html" class="text-black hover:text-black uppercase">Trang
+            Chủ</a></li>
+        <li class="mx-3 font-semibold  "><a href="product.html" class="text-black hover:text-black uppercase">Sản
+            Phẩm</a></li>
+        <li class="mx-3 font-semibold  "><a href="news.html" class="text-black hover:text-black uppercase">Tin Tức</a>
+        </li>
+        <li class="mx-3 font-semibold  "><a href="contact.html" class="text-black hover:text-black uppercase">Liên
+            Hệ</a></li>
+      </ul>
+    </nav>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863981046052!2d105.74459305097496!3d21.03812778592458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2sFPT%20Polytechnic%20Hanoi!5e0!3m2!1sen!2s!4v1607409611787!5m2!1sen!2s"
+      class="w-full" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+    </iframe>
+    <div class="w-96 mx-auto">
+      <div class="">
+        <div class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg text-center hidden" role="alert" id="msg" >
+                    
+        </div>
+        <h3 class="text-3xl  font-semibold mt-10 text-center ">LIÊN HỆ VỚI CHÚNG TÔI</h3>
+        <div class=" mt-5 mb-10 place-items-center">
+          <div class="w-full  bg-white ">
+            <form class="" id= "add-form">
+              <label for="firstname" class="block text-xs font-semibold text-gray-600 uppercase">Họ và tên</label>
+              <input id="firstname" type="text" name="firstname" placeholder="Họ và tên"
+                class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />
+                <p class="text-red-500 small italic" id ="message_error1"></p>
+              <label for="email" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-mail</label>
+              <input id="email" type="email" name="email" placeholder="Email@gmail.com"
+                class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />
+                <p class="text-red-500 small italic" id ="message_error5"></p>
+              <label for="address" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Địa chỉ</label>
+              <input id="address" type="text" name="address" placeholder="Địa chỉ"
+                class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />
+              <label for="phone_number" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Số điện
+                thoại</label>
+              <input id="phone_number" type="text" name="phone_number" placeholder="Số điện thoại"
+                class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />
+                <p class="text-red-500 small italic" id ="message_error6"></p>
+              <label for="content" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Nội dung</label>
+              <textarea id="content" type="text" name="content" placeholder="Nội dung"
+                class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                cols="30" rows="5"></textarea>
+              <button type="submit"
+                class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                Gửi Nội dung
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-black">
+      <div class="container mx-auto  ">
+        <div class="flex ">
+          <div class="flex-1 mx-3 my-3 ">
+            <h3 class="text-gray-50 text-mono text-xl my-3 uppercase">Homie</h3>
+            <p class=" text-gray-50 text-mono my-3 ">Số 1 Trịnh Văn Bô,Nam Từ Liêm,Hà Nội</p>
+            <p class=" text-gray-50 text-mono my-3">0123456789</p>
+            <p class="text-gray-50 text-mono  ">© Easybank. All Rights Reserved</p>
+          </div>
+          <div class="flex-1 mx-3 my-3">
+            <h3 class=" text-gray-50 text-mono text-xl my-3 uppercase">Homie</h3>
+            <p class="text-gray-50 text-mono my-3">Giới thiệu</p>
+            <p class="text-gray-50 text-mono my-3">Câu hỏi thường gặp</p>
+            <p class="text-gray-50 text-mono my-3">Liên hệ</p>
+          </div>
+          <div class="flex-1 mx-3 my-3">
+            <h3 class=" text-gray-50 text-mono text-xl my-3">Hỗ Trợ</h3>
+            <p class="text-gray-50 text-mono my-3">Hỗ trợ</p>
+            <p class="text-gray-50 text-mono my-3">Đóng góp</p>
+          </div>
+          <div class="flex-1 mx-3 my-3">
+            <h3 class=" text-gray-50 text-mono text-xl my-3">Theo dõi chúng tôi</h3>
+            <p class="text-gray-50 text-mono my-3">Nhập email để đăng ký nhận những thông tin hữu ích về học tập từ
+              Beeng</p>
+            <form class=" ">
+              <input class="rounded-full py-2 px-3  mr-0  text-gray-800 border-gray-200 bg-white my-3"
+                placeholder="email@gmail.com" />
+              <button
+                class="px-5 rounded-full bg-white  text-gray-800 font-bold py-2  uppercase border-indigo-400 ">Đăng
+                Ký</button>
+            </form>
+          </div>
+        </div>
+    </footer>
+</body>
+<!-- partial -->
+<script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js'></script>
+<script src="../js/contact.js"></script>
+
+</html>
+
+</div>

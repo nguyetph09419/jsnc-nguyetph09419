@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./image/kiss-wink-heart-regular.svg">
+  <title>Trang Chủ</title>
+  <!-- link tailwind -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- link bootstrap -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.js"
+  integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+  crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mx-auto">
+    <header class="flex">
+      <div class="flex-1 flex items-center">
+        <div class="relative hidden md:block">
+          <input type="search"
+            class="pl-10 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+            placeholder="Search">
+          <svg class="h-6 w-6 text-gray-300 ml-2 mt-2 stroke-current absolute top-0 left-0"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex-grow flex justify-center">
+        <img src="https://bizweb.dktcdn.net/100/345/647/themes/710110/assets/logo.png?1593244016703" alt="">
+      </div>
+
+      <div class="flex-1 flex justify-center items-center justify-around">
+        <div class="uppercase"><a href="" class="text-black hover:text-black font-medium">Tài Khoản</a></div>
+        <div class="flex uppercase ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20px">
+            <path
+              d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          </svg>
+          <a href="" class="text-black hover:text-black font-medium">Giỏ Hàng</a>
+        </div>
+      </div>
+    </header>
+    <nav class="my-4">
+      <ul class="flex justify-center ">
+        <li class="mx-3 font-semibold  "><a href="index.html" class="text-black hover:text-black uppercase">Trang Chủ</a></li>
+        <li class="mx-3 font-semibold  "><a href="product.html" class="text-black hover:text-black uppercase">Sản Phẩm</a></li>
+        <li class="mx-3 font-semibold  "><a href="news.html" class="text-black hover:text-black uppercase">Tin Tức</a></li>
+        <li class="mx-3 font-semibold  "><a href="contact.html" class="text-black hover:text-black uppercase">Liên Hệ</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="breadcrumb bg-white">
+      <ol class="breadcrumb bg-white">
+        <li class="breadcrumb-item"><a href="#" class="text-black hover:text-black text-sm">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="#" class="text-black hover:text-black text-sm">Danh mục</a></li>
+        <li class="breadcrumb-item"><a href="#" class="text-black hover:text-black text-sm">Sản phẩm</a></li>
+      </ol>
+    </nav>
+    <hr>
+    <h3 class="text-center font-bold text-xl uppercase" id="name-category">Sản Phẩm</h3>
+    <hr>
+    <div class="flex items-center">
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+          <span>Sắp Xêp</span>
+          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+          <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#" id="a-z">Từ A-Z</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#" id="forPrice">Theo Giá</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative hidden md:block">
+        <input type="search"
+          class="pl-10 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+          placeholder="Search" id="keyword">
+        <svg class="h-6 w-6 text-gray-300 ml-2 mt-2 stroke-current absolute top-0 left-0"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+    </div>
+    <hr>
+  </div>
+  
+  
+  <div class="container mx-auto">
+    <div class="flex justify-between flex-wrap" id="product">
+    </div>
+
+    <!-- <div class="my-4">
+      <h3 class="uppercase text-xl font-bold text-center">Sản Phẩm Mới</h3>
+      <div class=" flex justify-between items-center my-5 " id="new-product">
+        
+      </div>
+
+    </div>
+    <div class="my-4">
+      <h3 class="uppercase text-xl font-bold text-center">Sản Phẩm bán chạy</h3>
+      <div class=" flex justify-between items-center my-5 " id="high-sell-product">
+        
+      </div>
+      
+    </div> -->
+    
+  </div>
+  <footer class="bg-black">
+    <div class="container mx-auto  ">
+      <div class="flex ">
+        <div class="flex-1 mx-3 my-3 ">
+          <h3 class="text-gray-50 text-mono text-xl my-3 uppercase">Homie</h3>
+          <p class=" text-gray-50 text-mono my-3 ">Số 1 Trịnh Văn Bô,Nam Từ Liêm,Hà Nội</p>
+          <p class=" text-gray-50 text-mono my-3">0123456789</p>
+          <p class="text-gray-50 text-mono  ">© Easybank. All Rights Reserved</p>
+        </div>
+        <div class="flex-1 mx-3 my-3">
+          <h3 class=" text-gray-50 text-mono text-xl my-3 uppercase">Homie</h3>
+          <p class="text-gray-50 text-mono my-3">Giới thiệu</p>
+          <p class="text-gray-50 text-mono my-3">Câu hỏi thường gặp</p>
+          <p class="text-gray-50 text-mono my-3">Liên hệ</p>
+        </div>
+        <div class="flex-1 mx-3 my-3">
+          <h3 class=" text-gray-50 text-mono text-xl my-3">Hỗ Trợ</h3>
+          <p class="text-gray-50 text-mono my-3">Hỗ trợ</p>
+          <p class="text-gray-50 text-mono my-3">Đóng góp</p>
+        </div>
+        <div class="flex-1 mx-3 my-3">
+          <h3 class=" text-gray-50 text-mono text-xl my-3">Theo dõi chúng tôi</h3>
+          <p class="text-gray-50 text-mono my-3">Nhập email để đăng ký nhận những thông tin hữu ích về học tập từ
+            Beeng</p>
+          <form class=" ">
+            <input class="rounded-full py-2 px-3  mr-0  text-gray-800 border-gray-200 bg-white my-3"
+              placeholder="email@gmail.com" />
+            <button
+              class="px-5 rounded-full bg-white  text-gray-800 font-bold py-2  uppercase border-indigo-400 ">Đăng
+              Ký</button>
+          </form>
+        </div>
+      </div>
+  </footer>
+  <script src="../js/product.js"></script>
+</body>
+
+</html>
